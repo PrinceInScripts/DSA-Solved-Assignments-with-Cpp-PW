@@ -1,7 +1,7 @@
 /*
 Q6. How many of these can be a variable name ?
 a) 01Pwskills
-b) 0FLOAT
+b) _FLOAT
 c) int
 d) FLOAT
 e) You will succeed
@@ -9,12 +9,9 @@ e) You will succeed
 
 /*
 Ans .
-In their only have one variable name is syntactically correct, that's FLOAT.
+In their only have two variable name is syntactically correct, that's _FLOAT and FLOAT
 
 a) 01Pwskills
-It not a variable because in variable name start with digit and these is syntactically incorrect.
-
-b) 0FLOAT
 It not a variable because in variable name start with digit and these is syntactically incorrect.
 
 c) int
