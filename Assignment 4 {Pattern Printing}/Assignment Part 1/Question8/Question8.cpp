@@ -2,10 +2,10 @@
 Q1. Print the following pattern
 Input: n = 4
 Output :
-****
-****
-****
-****
+1
+1 2
+1 2 3
+1 2 3 4
 */
 
 /*
@@ -20,18 +20,18 @@ int main(){
     cin>>n;
     
     for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            cout<<"* ";
+        for(int j=1;j<=i;j++){
+           cout<<j<<" ";
         }
         cout<<endl;
     }
 }
 
 /*
+#Output
 Enter a number : 4
-* * * *
-* * * *
-* * * *
-* * * *
-* * * *
+1
+1 2
+1 2 3
+1 2 3 4
 */
