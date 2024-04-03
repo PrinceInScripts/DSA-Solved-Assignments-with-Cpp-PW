@@ -31,9 +31,7 @@ vector<int> reverse(vector<int> v){
 int main(){
     vector<int> v={4,2,1,2,1,2,4};
     // vector<int> v={1,2,3,4,5,6,7};
-    display(v);
     vector<int> v1=reverse(v);
-    display(v1);
     int count=0;
     bool flag=false;
     for(int i=0;i<v.size();i++){
