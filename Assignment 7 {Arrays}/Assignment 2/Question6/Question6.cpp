@@ -44,19 +44,11 @@ int uniqueNum(vector<int> nums){
     return unique;
 }
 int main(){
-    vector<int> v={3,2,4,2,4,3,8};
+    vector<int> v={3,2,8,2,4,3,8};
     display(v);
     sort(v);
     display(v);
-    // int unique;
-    // for(int i=0;i<v.size();i+=2){
-    //     if(v[i]!=v[i+1]){
-    //         unique=v[i];
-    //         break;
-    //     }
-    // }
-
-    // cout<<unique;
+  
     int unique=uniqueNum(v);
     cout<<unique;
 }

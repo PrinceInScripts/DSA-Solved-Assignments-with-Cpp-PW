@@ -2,9 +2,6 @@
 Q3. Check if the given array is sorted or not.
 */
 
-/*
-Q2. WAP to find the largest three elements in the array.
-*/
 
 #include<iostream>
 #include<vector>
@@ -27,7 +24,8 @@ int isSorted(vector<int> v){
 
 }
 int main(){
-    vector<int> v={3,2,4,6,8,5,1,7};
+    // vector<int> v={3,2,4,6,8,5,1,7};
+    vector<int> v={1,2,3,4,5,6,7,8};
     bool flag=isSorted(v);
     
     if(flag)  cout<<"Given array is Sort";
