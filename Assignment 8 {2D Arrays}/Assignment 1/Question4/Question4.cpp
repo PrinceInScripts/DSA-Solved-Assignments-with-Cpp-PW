@@ -11,7 +11,7 @@ Output 1: 2
 #include<limits.h>
 using namespace std;
 int main(){
-    vector<vector <int>> v={{1000,3,5,7},{30,4,7,8},{100,4,12,3}};
+    vector<vector <int>> v={{1,3,5,7},{3,4,7,8},{1,4,12,3}};
     int row=v.size();
     int col=v[0].size();
 
@@ -25,6 +25,7 @@ int main(){
         }
         if(sum>max){
             row_num=i;
+            max=sum;
             cout<<sum<<endl;
         }
         
