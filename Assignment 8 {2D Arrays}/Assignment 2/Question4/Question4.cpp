@@ -13,24 +13,48 @@ int main(){
     int n;
     cout<<"Enter a number : ";
     cin>>n;
-    vector<vector <int>> v(n,vector<int> (n));
+    vector<vector <int>> matrix(n,vector<int> (n));
     
-   
+    int a=1;
+    int minR=0;
+    int minC=0;
+    int maxR=n-1;
+    int maxC=n-1;
+
+    while(minR<=maxR || minC<=maxC){
+        for(int i=minC;i<=maxC;i++){
+            matrix[minR][i]=a;
+            a++;
+        }
+        minR++;
+
+        for(int i=minR;i<=maxR;i++){
+            matrix[i][maxC]=a;
+            a++;
+        }
+        maxC--;
+
+        for(int i=maxC;i>=minC;i--){
+            matrix[maxR][i]=a;
+            a++;
+        }
+        maxR--;
+
+        for(int i=maxR;i>=minR;i--){
+            matrix[i][minC]=a;
+            a++;
+        }
+        minC++;
+
+    }
+    
+
     
 
     for(int i=0;i<n;i++){
-        if(i%2==0){
-       for(int j=0;j<n;j++){
-           cout<<v[i][j]<<" ";
-          
+        for(int j=0;j<n;j++){
+            cout<<matrix[i][j]<<" ";
         }
-        } else {
-         for(int j=n-1;j>=0;j--){
-          cout<<v[i][j]<<" ";
-         
-        }
-        }
-     
        
     }
    
