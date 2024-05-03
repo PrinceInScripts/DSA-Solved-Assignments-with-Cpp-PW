@@ -25,7 +25,7 @@ int main(){
     }
 
   
-   cout<<val;
+   cout<<val; 
     
    
 }
