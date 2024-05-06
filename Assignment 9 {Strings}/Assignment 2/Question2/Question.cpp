@@ -15,7 +15,7 @@ int main(){
     string str="1241";
     vector<int> nums;
     for(int i=0;i<str.size();i++){
-        nums.push_back(str[i]-48);
+        nums.push_back(str[i]-48); 
     }
 
     sort(nums.begin(),nums.end());
