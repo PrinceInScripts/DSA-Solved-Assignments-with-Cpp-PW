@@ -7,7 +7,7 @@ c++;
 */
 /*
 Ans. 
-Time complexity : log(n)
+Time complexity : O(log(n))
 The iteration are
 1  n
 2  n/2
