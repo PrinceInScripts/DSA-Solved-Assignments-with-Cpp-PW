@@ -1,4 +1,6 @@
-
+/*
+Q1. Write a recursive function to reverse a number. Avoid preceding 0s in the reversed number.
+*/
 
 #include<iostream>
 using namespace std;
