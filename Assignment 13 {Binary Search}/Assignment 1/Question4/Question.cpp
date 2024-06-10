@@ -13,19 +13,27 @@ Output 2: 2
 #include<climits>
 using namespace std;
 int main(){
-    int arr[]={1,2,3,3,4};
+    int arr[]={1,2,2,3,4,5};
     
     int n=sizeof(arr)/sizeof(arr[0]);
     int lo=0;
     int hi=n-1;
-    while(lo<=hi){
+    while(lo<hi){
         int mid=lo+(hi-lo)/2;
 
-        if(arr[mid]==arr[mid+1] || arr[mid]==arr[mid-1]){
-            cout<<arr[mid]<<endl;
-            break;
+        int count=0;
+
+        for(int num:arr){
+            if(num<=mid){
+                count++;
+            }
         }
+
+        if(count>mid) hi=mid;
+        else lo=mid+1;
     }
+
+    cout<<arr[lo]<<endl;
     
 
 }
