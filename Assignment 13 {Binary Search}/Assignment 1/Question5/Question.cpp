@@ -12,9 +12,16 @@ Output 2: no
 #include<vector>
 using namespace std;
 bool isPerfectSquare(int n){
-    int root=sqrt(n);
-    if(root*root==n) return true;
-    else return false;
+    int lo=1;
+    int hi=n;
+
+    while(lo<=hi){
+        int mid=lo+(hi-lo)/2;
+        if(mid*mid==n) return true;
+        if(mid*mid>n) hi=mid-1;
+        else lo=mid+1;
+    }
+    return false;
 }
 int main(){
     int n;
