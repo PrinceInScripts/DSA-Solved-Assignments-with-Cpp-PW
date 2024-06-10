@@ -9,36 +9,46 @@ Output: 2
 */
 
 #include<iostream>
+#include<vector>
 #include<climits>
 using namespace std;
-int main(){
-    int arr[3][4]={{0,0,1,1},{0,0,0,0},{1,1,1,1}};
+int rowMaximumOne(vector<vector<int>>& arr,int n,int m){
     int max=INT_MIN;
     int idx=-1;
-    for(int i=0;i<3;i++){
-        int *a=arr[i];
-        int n=4;
-        int lo=0;
-        int hi=n-1;
-        
-        int count=0;
-        while(lo<=hi){
-        int mid=lo+(hi-lo)/2;
+    for(int i=0;i<n;i++){
+       
+       int lo=0;
+       int hi=m-1;
+       int x=-1;
+       int ones=0;
+       while(lo<=hi){
+          int mid=lo+(hi-lo)/2;
 
-        if(a[mid]==1){
-            count++;
+          if(arr[i][mid]==1){
+              x=mid;
+              hi=mid-1;
+          } else{
             lo=mid+1;
-        } else {
-            lo=mid+1;
-        }
+          }
+       }
+       if(x==-1) ones=0;
+       else ones=n-x;
+    
+       if(ones>max){
+           idx=i;
+           max=ones;
+       }
     }
 
-    if(count>max){
-        max=count;
-        idx=i;
-    }
-    }
-    cout<<idx<<endl;
+    return idx;
+}
+int main(){
+    vector<vector<int>> arr={{0,1,1,1},{0,0,1,1},{0,0,0,0},{1,1,1,1}};
+    
+    int n=arr.size();
+    int m=arr[0].size();
+
+    cout<<rowMaximumOne(arr,n,m);
 
     
     

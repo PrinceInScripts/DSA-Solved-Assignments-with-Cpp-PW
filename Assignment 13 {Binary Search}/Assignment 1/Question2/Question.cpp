@@ -35,6 +35,7 @@ int main(){
     //         lo=mid+1;
     //     }
     // }
-    cout<<n-x;
+    if(x==-1) cout<<0;
+    else cout<<n-x;
 
 }
