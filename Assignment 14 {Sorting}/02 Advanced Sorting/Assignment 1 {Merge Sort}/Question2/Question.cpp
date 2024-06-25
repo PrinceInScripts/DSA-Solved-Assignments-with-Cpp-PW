@@ -1,4 +1,16 @@
-//Merge array
+/*
+Q2. Reverse Pairs (Leetcode Problem) : Given an integer array nums, return the number of reverse
+pairs in the array.
+
+Note:- Please try to invest time doing the assignments which are necessary to build a strong
+
+foundation. Do not
+
+directly Copy Paste using Google or ChatGPT. Please use your brain.
+A reverse pair is a pair (i, j) where:
+0 <= i < j < nums.length and
+nums[i] > 2 * nums[j].
+*/
 
 #include<iostream>
 #include<vector>
@@ -18,7 +30,7 @@ void merge(vector<int>& a, vector<int>& b, vector<int>& result){
     if(j==b.size())
         while(i<a.size()) result[k++]=a[i++];
 }
-int inversion(vector<int> a,vector<int> b){
+int countPair(vector<int> a,vector<int> b){
     int i=0,j=0;
     int count=0;
 
@@ -32,7 +44,7 @@ int inversion(vector<int> a,vector<int> b){
     }
     return count;
 }
-int mergeSort(vector<int>& v){
+int reversePair(vector<int>& v){
     int n=v.size();
     int count=0;
     int n1=n/2,n2=n-n/2;
@@ -45,10 +57,10 @@ int mergeSort(vector<int>& v){
         b[i]=v[i+n1];
     }
 
-    count+=mergeSort(a);
-    count+=mergeSort(b);
+    count+=reversePair(a);
+    count+=reversePair(b);
     
-    count+=inversion(a,b);
+    count+=countPair(a,b);
     merge(a,b,v);
     return count;
 }
@@ -62,6 +74,6 @@ int main(){
     }
     cout<<endl;
     
-    cout<<mergeSort(v)<<endl;
+    cout<<reversePair(v)<<endl;
 
 }
