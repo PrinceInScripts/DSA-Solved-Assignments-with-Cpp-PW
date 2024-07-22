@@ -32,6 +32,14 @@ class Date{
     void setYear(int year){
         this->year=year;
     }
+
+    void compareDates(Date& other){
+        if(date==other.date && month==other.month && year==other.year){
+            cout<<"Equal";
+        } else {
+            cout<<"Unequal";
+        }
+    }
 };
 int main(){
      Date date1;
@@ -44,9 +52,5 @@ int main(){
      date2.setMonth(7);
      date2.setYear(2024);
 
-     if(date1.getDate()==date2.getDate()){
-        cout<<"Equal"<<endl;
-     } else {
-        cout<<"Unequal"<<endl;
-     }
+     date1.compareDates(date2);
 }
